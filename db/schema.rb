@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_16_101444) do
+ActiveRecord::Schema.define(version: 2021_09_21_190349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_101444) do
     t.index ["iata"], name: "index_airports_on_iata", unique: true
     t.index ["icao"], name: "index_airports_on_icao"
     t.index ["name"], name: "index_airports_on_name"
+    t.index ["passenger_volume"], name: "index_airports_on_passenger_volume"
   end
 
 end

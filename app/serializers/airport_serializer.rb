@@ -28,6 +28,7 @@
 #  index_airports_on_iata_and_icao_and_name  (iata,icao,name)
 #  index_airports_on_icao                    (icao)
 #  index_airports_on_name                    (name)
+#  index_airports_on_passenger_volume        (passenger_volume)
 #
 class AirportSerializer < Blueprinter::Base
   identifier :id
