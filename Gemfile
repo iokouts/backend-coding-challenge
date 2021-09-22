@@ -38,6 +38,8 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'byebug'
+  gem 'countries'
 end
 
 group :test do
