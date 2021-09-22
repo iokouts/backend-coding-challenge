@@ -1,5 +1,6 @@
 require 'csv'
 require 'json'
+require 'countries'
 
 namespace :seeds do
   desc 'seed airport data from openflights.org'
@@ -18,6 +19,7 @@ namespace :seeds do
             .with_indifferent_access
             .merge(timestamps)
             .merge(passenger_volume: data_sets[:passenger_volumes_csv].find { |fixup_row| fixup_row['IATA'] == row['iata'] }.to_h['Passengers']&.to_i)
+            .merge(country_alpha2: ISO3166::Country.find_country_by_name(row['country']).try(:alpha2))
             .slice(*Airport.column_names)
       end.uniq { |row| row[:uid] },
     )
