@@ -51,6 +51,7 @@ FactoryBot.define do
       timezone { '1' }
       dst { 'E' }
       timezone_olson { 'Europe/Berlin' }
+      passenger_volume { 5000000 }
     end
 
     trait :muc do
@@ -66,6 +67,7 @@ FactoryBot.define do
       timezone { '1' }
       dst { 'E' }
       timezone_olson { 'Europe/Berlin' }
+      passenger_volume { 6000000 }
     end
 
     trait :zrh do
@@ -81,6 +83,7 @@ FactoryBot.define do
       timezone { '1' }
       dst { 'E' }
       timezone_olson { 'Europe/Zurich' }
+      passenger_volume { 1000000 }
     end
 
     trait :vie do
@@ -96,6 +99,7 @@ FactoryBot.define do
       timezone { '1' }
       dst { 'E' }
       timezone_olson { 'Europe/Vienna' }
+      passenger_volume { 7000000 }
     end
 
     trait :inn do

@@ -28,9 +28,15 @@
 #  index_airports_on_iata_and_icao_and_name  (iata,icao,name)
 #  index_airports_on_icao                    (icao)
 #  index_airports_on_name                    (name)
+#  index_airports_on_passenger_volume        (passenger_volume)
 #
 require 'rails_helper'
 
 RSpec.describe Airport, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { build(:airport) }
+
+  # pending "add some examples to (or delete) #{__FILE__}"
+  it 'should be valid' do
+    expect(subject.valid?).to be_truthy
+  end
 end
